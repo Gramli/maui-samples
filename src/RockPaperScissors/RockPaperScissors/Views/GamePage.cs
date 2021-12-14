@@ -6,12 +6,12 @@ using RockPaperScissors.ViewModels;
 using RockPaperScissors.Views.Game;
 using static CommunityToolkit.Maui.Markup.GridRowsColumns;
 
-namespace RockPaperScissors
+namespace RockPaperScissors.Views
 {
-    public class MainPage : ContentPage
+    public class GamePage : ContentPage
     {
         private enum Row { First, Second, Third, Fourth }
-        public MainPage(MainPageViewModel mainPageViewModel, PlayerView playerView, PlayGroundView playGroundView, ResultView resultView)
+        public GamePage(MainPageViewModel mainPageViewModel, PlayerView playerView, PlayGroundView playGroundView, ResultView resultView)
         {
             BindingContext = mainPageViewModel;
             Content = new Grid

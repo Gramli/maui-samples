@@ -4,29 +4,4 @@
              xmlns:local="clr-namespace:RockPaperScissors"
              x:Class="RockPaperScissors.App"
              windows:Application.ImageDirectory="Assets">
-    <Application.Resources>
-        <ResourceDictionary>
-
-            <Color x:Key="PrimaryColor">Black</Color>
-            <Color x:Key="SecondaryColor">White</Color>
-
-            <Style TargetType="Label">
-                <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
-                <Setter Property="FontFamily" Value="OpenSansRegular" />
-                <Setter Property="FontSize" Value="Title"/>
-            </Style>
-
-            <Style TargetType="Button">
-                <Setter Property="TextColor" Value="{DynamicResource SecondaryColor}" />
-                <Setter Property="FontFamily" Value="OpenSansRegular" />
-                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
-                <Setter Property="Padding" Value="14,10" />
-            </Style>
-            <Style TargetType="Image">
-                <Setter Property="HeightRequest" Value="100" />
-                <Setter Property="WidthRequest" Value="100" />
-            </Style>
-
-        </ResourceDictionary>
-    </Application.Resources>
 </Application>

@@ -5,7 +5,7 @@ using RockPaperScissors.Extensions;
 using RockPaperScissors.ViewModels;
 using static CommunityToolkit.Maui.Markup.GridRowsColumns;
 
-namespace RockPaperScissors.Views
+namespace RockPaperScissors.Views.Game
 {
     public class PlayerView : ContentView
     {
@@ -25,7 +25,7 @@ namespace RockPaperScissors.Views
                         Source = "icons8_rock_100px.png",
                         CommandParameter = Models.GameItem.Rock
                     }.Bind(Button.CommandProperty, nameof(PlayerViewModel.PlayerSelectionClickCmd))
-                    .Bind(Button.IsEnabledProperty, nameof(PlayerViewModel.IsEnabled), BindingMode.TwoWay)
+                    .Bind(IsEnabledProperty, nameof(PlayerViewModel.IsEnabled), BindingMode.TwoWay)
                     .Column(Column.Rock)
                     .SetCentered100pxImageButton(),
                     new ImageButton()
@@ -33,7 +33,7 @@ namespace RockPaperScissors.Views
                         Source = "icons8_roll_of_paper_100px.png",
                         CommandParameter = Models.GameItem.Paper,
                     }.Bind(Button.CommandProperty, nameof(PlayerViewModel.PlayerSelectionClickCmd))
-                    .Bind(Button.IsEnabledProperty, nameof(PlayerViewModel.IsEnabled), BindingMode.TwoWay)
+                    .Bind(IsEnabledProperty, nameof(PlayerViewModel.IsEnabled), BindingMode.TwoWay)
                     .Column(Column.Paper)
                     .SetCentered100pxImageButton(),
                     new ImageButton()
@@ -41,11 +41,11 @@ namespace RockPaperScissors.Views
                         Source = "icons8_scissors_100px.png",
                         CommandParameter = Models.GameItem.Scissors
                     }.Bind(Button.CommandProperty, nameof(PlayerViewModel.PlayerSelectionClickCmd))
-                    .Bind(Button.IsEnabledProperty, nameof(PlayerViewModel.IsEnabled), BindingMode.TwoWay)
+                    .Bind(IsEnabledProperty, nameof(PlayerViewModel.IsEnabled), BindingMode.TwoWay)
                     .Column(Column.Scissors)
                     .SetCentered100pxImageButton()
                 }
-            }.Bind(Grid.IsEnabledProperty, nameof(PlayerViewModel.IsEnabled), BindingMode.TwoWay);
+            }.Bind(IsEnabledProperty, nameof(PlayerViewModel.IsEnabled), BindingMode.TwoWay);
 
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
 
 namespace RockPaperScissors.Extensions
 {
@@ -13,21 +14,23 @@ namespace RockPaperScissors.Extensions
             return image;
         }
 
-        public static ImageButton SetCentered100pxImageButton(this ImageButton button)
+        public static ImageButton SetCentered100pxImageButton(this ImageButton button, Color backgroundColor = default)
         {
             button.HeightRequest = 100;
             button.WidthRequest = 100;
             button.HorizontalOptions = LayoutOptions.Center;
             button.VerticalOptions = LayoutOptions.Center;
-            button.BackgroundColor = KnownColor.Transparent;
+            button.BackgroundColor = backgroundColor == default ? KnownColor.Transparent : backgroundColor;
 
             return button;
         }
 
-        public static ContentView Center(this ContentView contentView)
+        public static Label SetBoldLabel(this Label label)
         {
-            contentView.VerticalOptions = LayoutOptions.Center;
-            return contentView;
+            label.FontSize = 18;
+            label.FontAttributes = FontAttributes.Bold;
+
+            return label;
         }
     }
 }

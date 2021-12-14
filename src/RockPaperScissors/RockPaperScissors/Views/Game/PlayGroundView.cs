@@ -5,7 +5,7 @@ using RockPaperScissors.Extensions;
 using RockPaperScissors.ViewModels;
 using static CommunityToolkit.Maui.Markup.GridRowsColumns;
 
-namespace RockPaperScissors.Views
+namespace RockPaperScissors.Views.Game
 {
     public class PlayGroundView : ContentView
     {
@@ -14,7 +14,7 @@ namespace RockPaperScissors.Views
         {
             Content = new Grid
             {
-                BackgroundColor  = Color.FromArgb("06BEE1"),
+                BackgroundColor = Color.FromArgb("06BEE1"),
                 ColumnDefinitions = Columns.Define(
                     (Column.Player, Star),
                     (Column.Middle, Star),

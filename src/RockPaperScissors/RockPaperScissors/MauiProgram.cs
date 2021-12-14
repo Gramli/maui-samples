@@ -6,6 +6,7 @@ using RockPaperScissors.Models;
 using RockPaperScissors.ViewModels;
 using RockPaperScissors.ViewModels.Factories;
 using RockPaperScissors.Views;
+using RockPaperScissors.Views.Game;
 
 namespace RockPaperScissors
 {
@@ -30,7 +31,8 @@ namespace RockPaperScissors
 			builder.Services.AddSingleton<PlayGroundView>();
 			builder.Services.AddSingleton<ResultView>();
 			builder.Services.AddSingleton<MainPageViewModel>();
-			builder.Services.AddSingleton<MainPage>();
+			builder.Services.AddSingleton<HomePage>();
+			builder.Services.AddSingleton<GamePage>();
 			return builder.Build();
 		}
 	}
