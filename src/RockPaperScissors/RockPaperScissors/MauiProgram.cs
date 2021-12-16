@@ -31,8 +31,9 @@ namespace RockPaperScissors
 			builder.Services.AddSingleton<PlayGroundView>();
 			builder.Services.AddSingleton<ResultView>();
 			builder.Services.AddSingleton<MainPageViewModel>();
-			builder.Services.AddSingleton<HomePage>();
 			builder.Services.AddSingleton<GamePage>();
+			builder.Services.AddSingleton<HomePageViewModel>();
+			builder.Services.AddSingleton<HomePage>();
 			return builder.Build();
 		}
 	}

@@ -1,15 +1,13 @@
 ﻿using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
 using RockPaperScissors.Views;
-using Application = Microsoft.Maui.Controls.Application;
 
 namespace RockPaperScissors
 {
-    public partial class App : Application
-	{
+    public class App : Microsoft.Maui.Controls.Application
+    {
 		public App(HomePage homePage)
 		{
-			InitializeComponent();
-
 			MainPage = new NavigationPage(homePage);
 		}
 	}

@@ -42,5 +42,10 @@ namespace RockPaperScissors.ViewModels
         {
             IsEnabled = true;
         }
+
+        public void ResetActualGame()
+        {
+            Reset();
+        }
     }
 }

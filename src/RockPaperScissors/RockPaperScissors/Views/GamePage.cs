@@ -8,12 +8,16 @@ using static CommunityToolkit.Maui.Markup.GridRowsColumns;
 
 namespace RockPaperScissors.Views
 {
-    public class GamePage : ContentPage
+    public class GamePage : ContentPage, IGameReset
     {
         private enum Row { First, Second, Third, Fourth }
+
+        private readonly IGameReset _gameReset;
         public GamePage(MainPageViewModel mainPageViewModel, PlayerView playerView, PlayGroundView playGroundView, ResultView resultView)
         {
+            _gameReset = mainPageViewModel;
             BindingContext = mainPageViewModel;
+            Title = "Game";
             Content = new Grid
             {
                 BackgroundColor = Color.FromArgb("FFCB47"),
@@ -41,6 +45,16 @@ namespace RockPaperScissors.Views
                     .Bind(ImageButton.IsVisibleProperty,nameof(MainPageViewModel.AllowReset), BindingMode.TwoWay)
                 }
             };
+        }
+
+        public void ResetActualGame()
+        {
+            _gameReset.ResetActualGame();
+        }
+
+        public void Reset()
+        {
+            _gameReset.Reset();
         }
     }
 }

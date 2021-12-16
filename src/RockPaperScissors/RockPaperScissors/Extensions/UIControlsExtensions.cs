@@ -32,5 +32,14 @@ namespace RockPaperScissors.Extensions
 
             return label;
         }
+
+        public static Button PrimaryButton(this Button button)
+        {
+            button.BackgroundColor = Color.FromArgb("06BEE1");
+            button.FontSize = 18;
+            button.FontAttributes = FontAttributes.Bold;
+            button.Margin = 5;
+            return button;
+        }
     }
 }

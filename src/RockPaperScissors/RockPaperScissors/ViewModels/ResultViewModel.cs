@@ -60,7 +60,13 @@ namespace RockPaperScissors.ViewModels
 
         public void Reset()
         {
-            
+            Wins = 0;
+            Losses = 0;
+            Ties = 0;
+        }
+        public void ResetActualGame()
+        {
+
         }
     }
 }

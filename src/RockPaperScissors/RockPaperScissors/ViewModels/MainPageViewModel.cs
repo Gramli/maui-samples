@@ -6,7 +6,7 @@ using System.ComponentModel;
 
 namespace RockPaperScissors.ViewModels
 {
-    public class MainPageViewModel : IMediator, INotifyPropertyChanged
+    public class MainPageViewModel : IMediator, INotifyPropertyChanged, IGameReset
     {
         private readonly ResultViewModel _resultViewModel;
         public ResultViewModel ResultViewModel { get { return _resultViewModel; } }
@@ -38,7 +38,7 @@ namespace RockPaperScissors.ViewModels
             _resultViewModel = resultViewModelFactory.CreateResultViewModel(this);
             _playGroundViewModel = playGroundViewModelFactory.CreatePlayGroundViewModel(this);
             _playerViewModel = playerViewModelFactory.CreatePlayerViewModel(this);
-            ResetCmd = new Command(Reset);
+            ResetCmd = new Command(ResetActualGame);
         }
 
         public void Send<T>(IMessageObject sendingObject) where T : IParticipant
@@ -53,6 +53,14 @@ namespace RockPaperScissors.ViewModels
                     _resultViewModel.Notify(sendingObject);
                     break;
             }
+        }
+
+        public void ResetActualGame()
+        {
+            _resultViewModel.ResetActualGame();
+            _playGroundViewModel.ResetActualGame();
+            _playerViewModel.ResetActualGame();
+            AllowReset = false;
         }
 
         public void Reset()

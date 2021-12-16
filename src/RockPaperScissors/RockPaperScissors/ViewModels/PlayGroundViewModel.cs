@@ -115,5 +115,10 @@ namespace RockPaperScissors.ViewModels
             EnemyImage = null;
             PlayerImage = null;
         }
+
+        public void ResetActualGame()
+        {
+            Reset();
+        }
     }
 }
