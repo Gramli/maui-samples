@@ -6,7 +6,7 @@ using RockPaperScissors.ViewModels;
 using RockPaperScissors.Views.Game;
 using static CommunityToolkit.Maui.Markup.GridRowsColumns;
 
-namespace RockPaperScissors.Views
+namespace RockPaperScissors.Pages
 {
     public class GamePage : ContentPage, IGameReset
     {
@@ -42,7 +42,7 @@ namespace RockPaperScissors.Views
                     .SetCentered100pxImageButton()
                     .Bind(Button.CommandProperty, nameof(MainPageViewModel.ResetCmd))
                     .Row(Row.Fourth)
-                    .Bind(ImageButton.IsVisibleProperty,nameof(MainPageViewModel.AllowReset), BindingMode.TwoWay)
+                    .Bind(IsVisibleProperty,nameof(MainPageViewModel.AllowReset), BindingMode.TwoWay)
                 }
             };
         }

@@ -3,9 +3,9 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Hosting;
 using RockPaperScissors.Converters;
 using RockPaperScissors.Models;
+using RockPaperScissors.Pages;
 using RockPaperScissors.ViewModels;
 using RockPaperScissors.ViewModels.Factories;
-using RockPaperScissors.Views;
 using RockPaperScissors.Views.Game;
 
 namespace RockPaperScissors

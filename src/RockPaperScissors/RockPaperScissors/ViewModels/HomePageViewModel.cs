@@ -1,4 +1,4 @@
-﻿using RockPaperScissors.Views;
+﻿using RockPaperScissors.Pages;
 using System.ComponentModel;
 
 namespace RockPaperScissors.ViewModels

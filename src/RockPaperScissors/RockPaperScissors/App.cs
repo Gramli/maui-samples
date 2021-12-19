@@ -1,6 +1,6 @@
 ﻿using Microsoft.Maui.Controls;
 using Microsoft.Maui.Graphics;
-using RockPaperScissors.Views;
+using RockPaperScissors.Pages;
 
 namespace RockPaperScissors
 {
