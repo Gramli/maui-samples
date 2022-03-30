@@ -7,7 +7,6 @@ Demonstrates:
 - Simple navigation
 - C# only UI
 - MVVM
-- **IN PROGRESS**
 
 ## SwapiClient
 Implementation of REST api client with **[Comet MVU UIToolkit](https://github.com/dotnet/Comet)**.
