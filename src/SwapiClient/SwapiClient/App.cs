@@ -1,12 +1,6 @@
-using System;
-using System.Linq;
-using Comet.Graphics;
-using Microsoft.Maui;
-using Microsoft.Maui.Graphics;
-using Microsoft.Maui.Hosting;
-using System.Collections.Generic;
 using Comet;
-using System.IO;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Maui.Hosting;
 
 namespace SwapiClient
 {

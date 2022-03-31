@@ -1,9 +1,8 @@
 ﻿using Newtonsoft.Json;
-using System;
 
-namespace SwapiClient.DTO
+namespace SwapiClient.API.DTO
 {
-    internal record BaseDto
+    public record BaseDto
     {
         [JsonProperty]
         public string Url { get; set; }

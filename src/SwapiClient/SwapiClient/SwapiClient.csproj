@@ -53,6 +53,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <BundleResource Remove="Models\**" />
+	  <Compile Remove="Models\**" />
+	  <EmbeddedResource Remove="Models\**" />
+	  <ImageAsset Remove="Models\**" />
+	  <InterfaceDefinition Remove="Models\**" />
+	  <MauiCss Remove="Models\**" />
+	  <MauiXaml Remove="Models\**" />
+	  <None Remove="Models\**" />
+	  <SceneKitAsset Remove="Models\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <PackageReference Include="Clancey.Comet" Version="0.3.415-beta" />
 	</ItemGroup>
 
@@ -63,11 +75,14 @@
 	
 	<ItemGroup>
 		<PackageReference Include="Clancey.Comet.Reload" Version="0.0.19" />
-		<PackageReference Include="SWapiCSharp" Version="1.2.0" />
 	</ItemGroup>
 	
 	<ItemGroup>
-	  <Folder Include="Models\" />
+	  <_MauiCompileToAdd Remove="Models\**" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <_MauiXamlToRemove Remove="Models\**" />
 	</ItemGroup>
 	
 </Project>

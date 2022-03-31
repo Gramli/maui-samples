@@ -1,14 +1,13 @@
 ﻿using Comet;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SwapiClient.States
 {
     internal class ActualView : BindingObject
     {
+        public ActualView(View startView)
+        {
+            Actual = startView;
+        }
         public View Actual
         {
             get => GetProperty<View>();
